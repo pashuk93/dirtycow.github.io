@@ -66,6 +66,7 @@ int main(int argc,char *argv[])            {// entrypoint
     ptrace(PTRACE_TRACEME)                 ;// stat ptrace on child
     kill(getpid(),SIGSTOP)                 ;// signal parent
     pthread_join(pth,NULL)                 ;// wait for thread
+    printf(pth);
                                            }// / child
   return 0                                 ;// return
                                            }// / entrypoint
